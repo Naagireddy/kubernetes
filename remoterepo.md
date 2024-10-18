@@ -5,6 +5,7 @@
 git config --global user.name "nagdevops506"
 git config --global user.email "example@gmail.com"
 cat .git/config --> verify details
+git remote add origin https://github.com/Naagireddy/kubernetes.git
 
 git remote add origin <git remote repo url>
 ```
