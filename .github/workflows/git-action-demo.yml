@@ -20,7 +20,8 @@ jobs:
         run: mvn clean install 
 
       - name: Build the Docker Image
-        run: docker build . --file Dockerfile --tag myfirstimage:$(data + %s)
+        run: |
+           docker build . --file Dockerfile --tag myfirstimage:$(data + %s)
 
 
 
