@@ -21,7 +21,7 @@ jobs:
 
       - name: Build the Docker Image
         run: |
-           docker build . --file Dockerfile --tag myfirstimage:$(data + %s)
+           docker build . --file Dockerfile --tag myfirstimage
 
 
 
