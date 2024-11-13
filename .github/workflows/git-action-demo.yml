@@ -21,7 +21,7 @@ jobs:
 
       - name: Build the Docker Image
         run: |
-           docker build . --file Dockerfile --tag myfirstimage
+           docker build . --file Dockerfile --tag myfirstimage:$(date +'%Y-%m-%d_%H-%M-%S')
 
 
 
