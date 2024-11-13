@@ -1,11 +1,17 @@
-name: sample-pipeline
+name: Build Java Project
 on:
   push:
     branches:
       - 'master'
 jobs:
-  start:
+  build: 
     runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@v4
+
+      - name: Setup JDK 17
+        uses: actions/setup-java@3
+        with:
+          java-version: '17'
+          distribution: 'adoptopenjdk'
