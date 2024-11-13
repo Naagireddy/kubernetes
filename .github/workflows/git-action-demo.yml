@@ -21,7 +21,15 @@ jobs:
 
       - name: Build the Docker Image
         run: |
-           docker build . --file Dockerfile --tag myfirstimage:$(date +'%Y-%m-%d_%H-%M-%S')
+           IMAGE_TAG="myfirstimage:$(date +'%Y-%m-%d_%H-%M-%S')
+           echo "Building image with tag $IMAGE_TAG"
+           docker build . --file Dockerfile --tag $IMAGE_TAG
+
+      - name: Push Docker image to DockerHub
+        run: |
+           IMAGE_TAG="myfirstimage:$(date +'%Y-%m-%d_%H-%M-%S')
+           docker push $IMAGE_TAG
+           
 
 
 
