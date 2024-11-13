@@ -28,7 +28,7 @@ jobs:
       - name: Set image tag with timestamp
         id: set_tag
         run: |
-          IMAGE_TAG="myfirstimage:$(date +'%Y-%m-%d_%H-%M-%S')"
+          IMAGE_TAG="snagireddy9/myfirstimage:$(date +'%Y-%m-%d_%H-%M-%S')"
           echo "IMAGE_TAG=${IMAGE_TAG}" >> $GITHUB_ENV    
 
       - name: Build the Docker Image
