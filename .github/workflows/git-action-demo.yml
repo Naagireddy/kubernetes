@@ -37,7 +37,7 @@ jobs:
        
       - name: Push Docker image to DockerHub
         run: |
-           IMAGE_TAG="myfirstimage:$(date +'%Y-%m-%d_%H-%M-%S')"
+           IMAGE_TAG="myfirstimage" #:$(date +'%Y-%m-%d_%H-%M-%S')"
            docker push $IMAGE_TAG
            
 
