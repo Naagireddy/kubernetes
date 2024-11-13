@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: frontend
+  labels:
+    app: guestbook
+    tier: frontend
+spec:
+  replicas: 3
+  selector:
+    matchExpressions:
+      - key: app
+        operator: In
+        values:
+          - myapp1
+          - myapp2
+  template:
+    metadata:
+      labels:
+        app: myapp1
+    spec:
+      containers:
+        - name: hello
+          image: busybox
+          command: ['sh', '-c','echo "hello kubernetes" && sleep 3600']
