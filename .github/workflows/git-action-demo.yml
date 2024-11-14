@@ -28,7 +28,7 @@ jobs:
       - name: Set image tag with timestamp
         id: set_tag
         run: |
-          IMAGE_TAG="snagireddy9/myfirstimage:${{github.run_number}}"
+          IMAGE_TAG="${{ secrets.DOCKER_USERNAME }}/myfirstimage:${{github.run_number}}"
           #IMAGE_TAG="snagireddy9/myfirstimage:$(date +'%Y-%m-%d_%H-%M-%S')"
           echo "IMAGE_TAG=${IMAGE_TAG}" >> $GITHUB_ENV  
           echo "${{github.run_number}}"
