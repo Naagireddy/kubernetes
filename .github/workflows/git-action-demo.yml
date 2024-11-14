@@ -49,10 +49,10 @@ jobs:
            #IMAGE_TAG="myfirstimage" #:$(date +'%Y-%m-%d_%H-%M-%S')"
            docker push $IMAGE_TAG
 
-      - name: Docker Push
-        run: |
-          docker tag myfirstimage ${name}/myfirstimage:${{github.run_number}}
-          docker myfirstimage ${name}/myfirstimage:${{github.run_number}}   
+      #- name: Docker Push
+       # run: |
+        #  docker tag myfirstimage ${name}/myfirstimage:${{github.run_number}}
+         # docker myfirstimage ${name}/myfirstimage:${{github.run_number}}   
            
 
 
