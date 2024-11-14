@@ -37,8 +37,8 @@ jobs:
         run: |
            #IMAGE_TAG="myfirstimage:$(date +'%Y-%m-%d_%H-%M-%S')"
            echo "Building image with tag $IMAGE_TAG"
-           #docker build . --file Dockerfile --tag $IMAGE_TAG
-           docker build . --file Dockerfile 
+           docker build . --file Dockerfile --tag $IMAGE_TAG
+           #docker build . --file Dockerfile 
 
       - name: Show the Dokcer images
         run: |
@@ -51,8 +51,8 @@ jobs:
 
       - name: Docker Push
         run: |
-          docker tag catalogue ${name}/catalogue:${{github.run_number}}
-          docker catalogue ${name}/catalogue:${{github.run_number}}   
+          docker tag myfirstimage ${name}/myfirstimage:${{github.run_number}}
+          docker myfirstimage ${name}/myfirstimage:${{github.run_number}}   
            
 
 
