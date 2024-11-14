@@ -62,7 +62,7 @@ jobs:
           aws-region: ap-south-1
 
       - name: deploy
-        run: aws ecs deploy --service my-service --cluster demo1 --task-definition my-task
+        run: aws ecs deploy --service my-service --cluster demo1 --task-definition my-task --codedeploy-appspec
        
 
 
