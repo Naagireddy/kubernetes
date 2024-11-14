@@ -53,7 +53,14 @@ jobs:
        # run: |
         #  docker tag myfirstimage ${name}/myfirstimage:${{github.run_number}}
          # docker myfirstimage ${name}/myfirstimage:${{github.run_number}}   
-           
+
+      - name: Configure Aws Credentials
+        uses: aws-action/configure-aws-credentials@v1
+        with:
+          aws_access_key_id: ${{ secretes.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{secretes.AWS_SECRET_ACCESS_KEY}}
+          region: ap-south-1
+       
 
 
 
